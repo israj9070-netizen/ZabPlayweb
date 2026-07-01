@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        :root { --zab-cyan: #00bcd4; --bg-dark: #121212; }
+        body { font-family: sans-serif; background-color: var(--bg-dark); color: white; margin: 0; }
+        .hero { text-align: center; padding: 50px; background: linear-gradient(to bottom, #1a1a1a, var(--bg-dark)); }
+        .hero h1 { color: var(--zab-cyan); font-size: 3rem; }
+        .btn-download { background-color: var(--zab-cyan); padding: 15px 30px; border-radius: 50px; text-decoration: none; color: white; font-weight: bold; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 50px; }
+        .feature-card { border: 1px solid #333; padding: 20px; border-radius: 10px; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>ZabPlay</h1>
+        <p>All in One Media Player for Android</p>
+        <a href="#" class="btn-download">Free Download Now</a>
+    </div>
+
+    <div class="features">
+        <div class="feature-card"><h3>File Transfer</h3><p>Send & Receive files instantly.</p></div>
+        <div class="feature-card"><h3>Privacy Locker</h3><p>Secure files with PIN protection.</p></div>
+        <div class="feature-card"><h3>MP3 Converter</h3><p>Convert videos to audio easily.</p></div>
+        <div class="feature-card"><h3>Smart Management</h3><p>Smooth media organization.</p></div>
+    </div>
+</body>
+</html>
