@@ -8,21 +8,24 @@
         :root { --zab-cyan: #00bcd4; --bg-gradient: linear-gradient(135deg, #ffffff 0%, #e0f7fa 40%, #b2ebf2 70%, #00e676 100%); }
         body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--bg-gradient); background-attachment: fixed; color: #333; }
         
-        /* Header */
         .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); }
         .logo { font-size: 1.8rem; font-weight: bold; color: #006064; }
         .lang-selector { border: 2px solid #006064; padding: 5px 15px; border-radius: 8px; color: #006064; background: transparent; }
 
-        /* Hero */
         .hero { text-align: center; padding: 50px 20px; }
         .hero h1 { color: #006064; font-size: 3rem; margin-bottom: 5px; }
-        .platforms { margin: 20px 0; font-size: 24px; color: #006064; }
-        .btn-download { background-color: var(--zab-cyan); padding: 15px 40px; border-radius: 50px; text-decoration: none; color: white; font-weight: bold; box-shadow: 0 4px 15px rgba(0,188,212,0.4); }
 
-        /* Features 2x2 */
+        /* Platform Icons Section */
+        .platform-container { display: flex; justify-content: center; gap: 30px; margin: 30px 0; }
+        .platform-item { text-align: center; }
+        .icon-circle { width: 60px; height: 60px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 8px; }
+        .platform-name { font-size: 0.8rem; font-weight: bold; color: #006064; }
+
+        .btn-download { background-color: var(--zab-cyan); padding: 15px 40px; border-radius: 50px; text-decoration: none; color: white; font-weight: bold; box-shadow: 0 4px 15px rgba(0,188,212,0.4); display: inline-block; margin-top: 20px; }
+
         .features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; padding: 40px; max-width: 800px; margin: auto; }
         .feature-card { background: rgba(255, 255, 255, 0.6); padding: 25px; border-radius: 20px; text-align: center; border: 1px solid rgba(255,255,255,0.5); }
-        .icon { font-size: 40px; color: var(--zab-cyan); margin-bottom: 10px; }
+        .feature-icon { font-size: 40px; color: var(--zab-cyan); margin-bottom: 10px; }
     </style>
 </head>
 <body>
@@ -35,15 +38,23 @@
     <div class="hero">
         <h1>Download ZabPlay</h1>
         <p>All in One Media Player for Android</p>
-        <div class="platforms">📱 ▷ 🖥️</div>
+        
+        <!-- Platform Icons as requested -->
+        <div class="platform-container">
+            <div class="platform-item"><div class="icon-circle">🤖</div><div class="platform-name">Android</div></div>
+            <div class="platform-item"><div class="icon-circle">▶️</div><div class="platform-name">Play Store</div></div>
+            <div class="platform-item"><div class="icon-circle">🍎</div><div class="platform-name">Apple</div></div>
+            <div class="platform-item"><div class="icon-circle">🪟</div><div class="platform-name">Windows</div></div>
+        </div>
+        
         <a href="#" class="btn-download">Free Download Now</a>
     </div>
 
     <div class="features">
-        <div class="feature-card"><div class="icon">⟲</div><h3>File Transfer</h3></div>
-        <div class="feature-card"><div class="icon">🔒</div><h3>Privacy Locker</h3></div>
-        <div class="feature-card"><div class="icon">🎵</div><h3>MP3 Converter</h3></div>
-        <div class="feature-card"><div class="icon">📂</div><h3>Smart Management</h3></div>
+        <div class="feature-card"><div class="feature-icon">⟲</div><h3>File Transfer</h3></div>
+        <div class="feature-card"><div class="feature-icon">🔒</div><h3>Privacy Locker</h3></div>
+        <div class="feature-card"><div class="feature-icon">🎵</div><h3>MP3 Converter</h3></div>
+        <div class="feature-card"><div class="feature-icon">📂</div><h3>Smart Management</h3></div>
     </div>
 
 </body>
