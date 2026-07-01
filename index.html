@@ -3,75 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZabPlay - Ultimate Media Player</title>
+    <title>ZabPlay - Download Now</title>
     <style>
-        :root { 
-            --zab-cyan: #00bcd4; 
-            --bright-green: #00e676;
-            --white: #ffffff;
-        }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: linear-gradient(135deg, #ffffff 0%, #e0f7fa 40%, #b2ebf2 70%, #00e676 100%); background-attachment: fixed; color: #333; }
+        :root { --zab-cyan: #00bcd4; --bg-gradient: linear-gradient(135deg, #ffffff 0%, #e0f7fa 40%, #b2ebf2 70%, #00e676 100%); }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--bg-gradient); background-attachment: fixed; color: #333; }
         
-        /* Top Navigation Bar */
-        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; }
+        /* Header */
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); }
         .logo { font-size: 1.8rem; font-weight: bold; color: #006064; }
-        .lang-selector { border: 2px solid #006064; padding: 5px 15px; border-radius: 8px; cursor: pointer; font-weight: bold; color: #006064; background: transparent; }
+        .lang-selector { border: 2px solid #006064; padding: 5px 15px; border-radius: 8px; color: #006064; background: transparent; }
 
-        /* Hero Section */
-        .hero { text-align: center; padding: 60px 20px; }
-        .hero h1 { color: #006064; font-size: 3.5rem; margin-bottom: 10px; }
-        .hero p { font-size: 1.2rem; color: #555; margin-bottom: 30px; }
-        .btn-download { background-color: var(--zab-cyan); padding: 18px 40px; border-radius: 50px; text-decoration: none; color: white; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(0,188,212,0.4); }
+        /* Hero */
+        .hero { text-align: center; padding: 50px 20px; }
+        .hero h1 { color: #006064; font-size: 3rem; margin-bottom: 5px; }
+        .platforms { margin: 20px 0; font-size: 24px; color: #006064; }
+        .btn-download { background-color: var(--zab-cyan); padding: 15px 40px; border-radius: 50px; text-decoration: none; color: white; font-weight: bold; box-shadow: 0 4px 15px rgba(0,188,212,0.4); }
 
-        /* Features Grid */
-        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; padding: 50px; max-width: 1100px; margin: auto; }
-        .feature-card { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); padding: 30px; border-radius: 25px; text-align: center; border: 1px solid rgba(255, 255, 255, 0.5); transition: all 0.4s ease; }
-        .feature-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-        .icon { font-size: 50px; margin-bottom: 20px; color: var(--bright-green); }
-        h3 { color: #006064; }
+        /* Features 2x2 */
+        .features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; padding: 40px; max-width: 800px; margin: auto; }
+        .feature-card { background: rgba(255, 255, 255, 0.6); padding: 25px; border-radius: 20px; text-align: center; border: 1px solid rgba(255,255,255,0.5); }
+        .icon { font-size: 40px; color: var(--zab-cyan); margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
     <div class="navbar">
         <div class="logo">ZabPlay</div>
-        <select class="lang-selector">
-            <option>English</option>
-            <option>Hindi</option>
-            <option>Spanish</option>
-            <option>French</option>
-        </select>
+        <select class="lang-selector"><option>Hindi</option><option>English</option></select>
     </div>
 
     <div class="hero">
-        <h1>Welcome to ZabPlay</h1>
+        <h1>Download ZabPlay</h1>
         <p>All in One Media Player for Android</p>
+        <div class="platforms">📱 ▷ 🖥️</div>
         <a href="#" class="btn-download">Free Download Now</a>
     </div>
 
     <div class="features">
-        <div class="feature-card">
-            <div class="icon">⇄</div>
-            <h3>File Transfer</h3>
-            <p>Send & Receive media files instantly with high-speed logs.</p>
-        </div>
-        <div class="feature-card">
-            <div class="icon">🔒</div>
-            <h3>Privacy Locker</h3>
-            <p>Keep your private files secure with advanced PIN protection.</p>
-        </div>
-        <div class="feature-card">
-            <div class="icon">🎵</div>
-            <h3>MP3 Converter</h3>
-            <p>One-tap video to audio conversion with high-quality output.</p>
-        </div>
-        <div class="feature-card">
-            <div class="icon">📂</div>
-            <h3>Smart Management</h3>
-            <p>Smooth media organization with real-time storage tracking.</p>
-        </div>
+        <div class="feature-card"><div class="icon">⟲</div><h3>File Transfer</h3></div>
+        <div class="feature-card"><div class="icon">🔒</div><h3>Privacy Locker</h3></div>
+        <div class="feature-card"><div class="icon">🎵</div><h3>MP3 Converter</h3></div>
+        <div class="feature-card"><div class="icon">📂</div><h3>Smart Management</h3></div>
     </div>
 
 </body>
 </html>
-
